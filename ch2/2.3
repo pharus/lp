@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+# Compute the circumference of radius 12.5
+
+# pi value for this prog
+$pi = 3.141592654;
+chomp($radius = <STDIN>);
+
+if ($radius > 0) {
+	$circ = 2*$pi*$radius;
+} else {
+	$circ = 0; # undef will act as empty string in interpolation
+}
+
+print "$circ\n";
