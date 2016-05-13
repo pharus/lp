@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+# read list of numbers(sep lines) and print the corresponding name
+@names = qw(fred betty barney dino wilma pebbles bamm-bamm);
+
+chomp(@n = <STDIN>);
+foreach (@n) {
+	if ($_ > 0 && $_ < scalar @names) {
+		print "$names[$_ - 1]\n";
+	} else {
+		print "$_ not in bounds\n";
+	}
+}
